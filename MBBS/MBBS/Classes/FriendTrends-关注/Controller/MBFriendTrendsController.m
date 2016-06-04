@@ -8,8 +8,9 @@
 
 #import "MBFriendTrendsController.h"
 #import "MBRecommendController.h"
-
+#import "MBLoginRegisterController.h"
 @interface MBFriendTrendsController ()
+- (IBAction)loginRegister;
 
 @end
 
@@ -32,4 +33,9 @@
 }
 
 
+- (IBAction)loginRegister {
+    MBLogFunc;
+    MBLoginRegisterController *login = [[MBLoginRegisterController alloc]init];
+    [self presentViewController:login animated:YES completion:nil];
+}
 @end

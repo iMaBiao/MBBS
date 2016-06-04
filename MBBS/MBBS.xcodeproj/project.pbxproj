@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0708BB821D03150800EC5292 /* MBVerticalButtton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0708BB811D03150800EC5292 /* MBVerticalButtton.m */; };
+		071C1A3B1D030BD800E5B857 /* MBLoginRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C1A391D030BD800E5B857 /* MBLoginRegisterController.m */; };
+		071C1A3C1D030BD800E5B857 /* MBLoginRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071C1A3A1D030BD800E5B857 /* MBLoginRegisterController.xib */; };
 		3A3093271CFD3D0A0004F6AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3093261CFD3D0A0004F6AF /* AppDelegate.m */; };
 		3A4835E81D018A5700B88FD7 /* MBEssenceTagsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4835E71D018A5700B88FD7 /* MBEssenceTagsController.m */; };
 		3A4835EB1D018A7300B88FD7 /* MBEssenceTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4835EA1D018A7300B88FD7 /* MBEssenceTags.m */; };
@@ -56,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0708BB801D03150800EC5292 /* MBVerticalButtton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBVerticalButtton.h; sourceTree = "<group>"; };
+		0708BB811D03150800EC5292 /* MBVerticalButtton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBVerticalButtton.m; sourceTree = "<group>"; };
+		071C1A381D030BD800E5B857 /* MBLoginRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBLoginRegisterController.h; sourceTree = "<group>"; };
+		071C1A391D030BD800E5B857 /* MBLoginRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBLoginRegisterController.m; sourceTree = "<group>"; };
+		071C1A3A1D030BD800E5B857 /* MBLoginRegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBLoginRegisterController.xib; sourceTree = "<group>"; };
 		3A3093251CFD3D0A0004F6AF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A3093261CFD3D0A0004F6AF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3A4835E61D018A5700B88FD7 /* MBEssenceTagsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEssenceTagsController.h; sourceTree = "<group>"; };
@@ -274,6 +282,9 @@
 				3A9590C01CFEC375005FA2B4 /* MBRecommendController.h */,
 				3A9590C11CFEC375005FA2B4 /* MBRecommendController.m */,
 				3A9590C21CFEC375005FA2B4 /* MBRecommendController.xib */,
+				071C1A381D030BD800E5B857 /* MBLoginRegisterController.h */,
+				071C1A391D030BD800E5B857 /* MBLoginRegisterController.m */,
+				071C1A3A1D030BD800E5B857 /* MBLoginRegisterController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +309,8 @@
 				3A9590DE1CFEE36F005FA2B4 /* MBRecommendUserCell.h */,
 				3A9590DF1CFEE36F005FA2B4 /* MBRecommendUserCell.m */,
 				3A9590E01CFEE36F005FA2B4 /* MBRecommendUserCell.xib */,
+				0708BB801D03150800EC5292 /* MBVerticalButtton.h */,
+				0708BB811D03150800EC5292 /* MBVerticalButtton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -548,6 +561,7 @@
 				3ABE8A9E1CFD3A670036C6CB /* Main.storyboard in Resources */,
 				3A9590CE1CFECABC005FA2B4 /* MBRecommendCategoryCell.xib in Resources */,
 				3A9590C41CFEC375005FA2B4 /* MBRecommendController.xib in Resources */,
+				071C1A3C1D030BD800E5B857 /* MBLoginRegisterController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,7 +637,9 @@
 				3A5396091CFD824600DB5724 /* MBMeController.m in Sources */,
 				3A53961B1CFD901300DB5724 /* UIView+MBExtension.m in Sources */,
 				3A4835EF1D018ACC00B88FD7 /* MBEssenceTagsCell.m in Sources */,
+				071C1A3B1D030BD800E5B857 /* MBLoginRegisterController.m in Sources */,
 				3A53960F1CFD827C00DB5724 /* MBNewController.m in Sources */,
+				0708BB821D03150800EC5292 /* MBVerticalButtton.m in Sources */,
 				3A53961E1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m in Sources */,
 				3A4835EB1D018A7300B88FD7 /* MBEssenceTags.m in Sources */,
 				3A9590DA1CFEE194005FA2B4 /* MBRecommendUser.m in Sources */,
