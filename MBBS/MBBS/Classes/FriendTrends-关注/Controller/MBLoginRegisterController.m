@@ -12,6 +12,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bgView;
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UIView *zhuce;
+
+/** 登录框距离控制器view左边的间距 */
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginViewLeftMargin;
 
 
 - (IBAction)exitButton;
@@ -40,16 +44,40 @@
     
 }
 
+- (IBAction)showLoginOrRegister:(UIButton *)button {
+     // 退出键盘
+    [self.view endEditing:YES];
+    
+    NSLog(@"self.view.subViews = %@",self.view.subviews);
+    
+    
+    if (self.loginViewLeftMargin.constant == 0) { //注册
+        self.loginViewLeftMargin.constant = -self.view.width;
+        button.selected = YES;
+    }else{  //登录
+        self.loginViewLeftMargin.constant = 0;
+        button.selected = NO;
+    }
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
+    self.zhuce.backgroundColor = [UIColor redColor];
+    MBLog(@"zhuce = %@",self.zhuce);
+}
+
+
+- (IBAction)exitButton {
+    MBLogFunc;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 /**
  * 让当前控制器对应的状态栏是白色
  */
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
-}
-
-- (IBAction)exitButton {
-    MBLogFunc;
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

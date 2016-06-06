@@ -8,7 +8,33 @@
 
 #import "MBTextField.h"
 
+static NSString *const  MBPlacehoderColorKeyPath = @"_placeholderLabel.textColor";
+
 @implementation MBTextField
+
+- (void)awakeFromNib{
+    
+    self.tintColor = self.textColor;
+    
+    [self resignFirstResponder];
+}
+
+/**
+ *  当前文本框成为焦点时调用
+ */
+- (BOOL)becomeFirstResponder{
+    //修改占位文字的颜色
+    [self setValue:self.textColor forKeyPath:MBPlacehoderColorKeyPath];
+    return [super becomeFirstResponder];
+}
+/**
+ *  当前文本框失去焦点时就会调用
+ */
+- (BOOL)resignFirstResponder{
+    [self setValue:[UIColor grayColor] forKeyPath:MBPlacehoderColorKeyPath];
+    
+    return [super resignFirstResponder];
+}
 
 
 - (void)drawRect:(CGRect)rect {

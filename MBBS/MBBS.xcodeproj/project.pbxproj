@@ -39,6 +39,8 @@
 		3ABE8A9E1CFD3A670036C6CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ABE8A9C1CFD3A670036C6CB /* Main.storyboard */; };
 		3ABE8AA01CFD3A670036C6CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABE8A9F1CFD3A670036C6CB /* Assets.xcassets */; };
 		3ABE8AAE1CFD3A680036C6CB /* MBBSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE8AAD1CFD3A680036C6CB /* MBBSTests.m */; };
+		3AC509AC1D056A930074B28E /* MBPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC509AB1D056A930074B28E /* MBPushGuideView.m */; };
+		3AC509B01D056AAE0074B28E /* MBPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */; };
 		4C9415F2FA0B946DC1569F9D /* Pods_MBBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF922091BA7F35895CAF29F6 /* Pods_MBBS.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,9 @@
 		3ABE8AB41CFD3A680036C6CB /* MBBSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBBSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABE8AB81CFD3A680036C6CB /* MBBSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBBSUITests.m; sourceTree = "<group>"; };
 		3ABE8ABA1CFD3A680036C6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AC509AA1D056A930074B28E /* MBPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPushGuideView.h; sourceTree = "<group>"; };
+		3AC509AB1D056A930074B28E /* MBPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPushGuideView.m; sourceTree = "<group>"; };
+		3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPushGuideView.xib; sourceTree = "<group>"; };
 		9A06C519DB4FAC17D69CE3C1 /* Pods-MBBS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBBS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBBS/Pods-MBBS.debug.xcconfig"; sourceTree = "<group>"; };
 		A3195EE78E988CA4E71C4046 /* Pods-MBBS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBBS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MBBS/Pods-MBBS.release.xcconfig"; sourceTree = "<group>"; };
 		CF922091BA7F35895CAF29F6 /* Pods_MBBS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBBS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +243,9 @@
 			children = (
 				3A5396161CFD8B6100DB5724 /* MBTabBar.h */,
 				3A5396171CFD8B6100DB5724 /* MBTabBar.m */,
+				3AC509AA1D056A930074B28E /* MBPushGuideView.h */,
+				3AC509AB1D056A930074B28E /* MBPushGuideView.m */,
+				3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -566,6 +574,7 @@
 				3ABE8A9E1CFD3A670036C6CB /* Main.storyboard in Resources */,
 				3A9590CE1CFECABC005FA2B4 /* MBRecommendCategoryCell.xib in Resources */,
 				3A9590C41CFEC375005FA2B4 /* MBRecommendController.xib in Resources */,
+				3AC509B01D056AAE0074B28E /* MBPushGuideView.xib in Resources */,
 				071C1A3C1D030BD800E5B857 /* MBLoginRegisterController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +668,7 @@
 				3A5396151CFD882D00DB5724 /* MBNavigationController.m in Sources */,
 				3A5396181CFD8B6100DB5724 /* MBTabBar.m in Sources */,
 				3A5395F71CFD69C000DB5724 /* MBTabBarController.m in Sources */,
+				3AC509AC1D056A930074B28E /* MBPushGuideView.m in Sources */,
 				3A9590E11CFEE36F005FA2B4 /* MBRecommendUserCell.m in Sources */,
 				3A4835E81D018A5700B88FD7 /* MBEssenceTagsController.m in Sources */,
 				3A9590C31CFEC375005FA2B4 /* MBRecommendController.m in Sources */,

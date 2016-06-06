@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MBTabBarController.h"
+#import "MBPushGuideView.h"
+
 @interface AppDelegate ()
 
 @end
@@ -21,14 +23,17 @@
     [UIApplication sharedApplication].statusBarHidden = NO;
     self.window = [[UIWindow alloc]init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    [self.window makeKeyAndVisible];
 
-//    NSString *key = @"CFBundleVersion";
-//    NSString *key = @"CFBundleShortVersionString";
-//    NSString *currentVersion = [NSString stringWithFormat:@"V%@",[NSBundle mainBundle].infoDictionary[key]];
-//    MBLog(@"currentVersion = %@",currentVersion);
     
     self.window.rootViewController = [[MBTabBarController alloc]init];
+   
+    // 显示窗口
+    [self.window makeKeyAndVisible];
+    
+    self.window.userInteractionEnabled = YES;
+    // 显示推送引导
+    [MBPushGuideView show];
+    
     return YES;
 }
 
