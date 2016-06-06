@@ -24,6 +24,7 @@
 		3A5396181CFD8B6100DB5724 /* MBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5396171CFD8B6100DB5724 /* MBTabBar.m */; };
 		3A53961B1CFD901300DB5724 /* UIView+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53961A1CFD901300DB5724 /* UIView+MBExtension.m */; };
 		3A53961E1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53961D1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m */; };
+		3A886C121D052CC200865184 /* MBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A886C111D052CC200865184 /* MBTextField.m */; };
 		3A9590BC1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9590BB1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib */; };
 		3A9590C31CFEC375005FA2B4 /* MBRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9590C11CFEC375005FA2B4 /* MBRecommendController.m */; };
 		3A9590C41CFEC375005FA2B4 /* MBRecommendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9590C21CFEC375005FA2B4 /* MBRecommendController.xib */; };
@@ -92,6 +93,8 @@
 		3A53961A1CFD901300DB5724 /* UIView+MBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MBExtension.m"; sourceTree = "<group>"; };
 		3A53961C1CFD969900DB5724 /* UIBarButtonItem+MBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+MBExtension.h"; sourceTree = "<group>"; };
 		3A53961D1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MBExtension.m"; sourceTree = "<group>"; };
+		3A886C101D052CC200865184 /* MBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTextField.h; sourceTree = "<group>"; };
+		3A886C111D052CC200865184 /* MBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTextField.m; sourceTree = "<group>"; };
 		3A9590B31CFEB61F005FA2B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3A9590B51CFEB629005FA2B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A9590B71CFEB632005FA2B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -311,6 +314,8 @@
 				3A9590E01CFEE36F005FA2B4 /* MBRecommendUserCell.xib */,
 				0708BB801D03150800EC5292 /* MBVerticalButtton.h */,
 				0708BB811D03150800EC5292 /* MBVerticalButtton.m */,
+				3A886C101D052CC200865184 /* MBTextField.h */,
+				3A886C111D052CC200865184 /* MBTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				0708BB821D03150800EC5292 /* MBVerticalButtton.m in Sources */,
 				3A53961E1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m in Sources */,
 				3A4835EB1D018A7300B88FD7 /* MBEssenceTags.m in Sources */,
+				3A886C121D052CC200865184 /* MBTextField.m in Sources */,
 				3A9590DA1CFEE194005FA2B4 /* MBRecommendUser.m in Sources */,
 				3ABE8A951CFD3A670036C6CB /* main.m in Sources */,
 				3A9590D11CFECB72005FA2B4 /* MBRecommendCategory.m in Sources */,
