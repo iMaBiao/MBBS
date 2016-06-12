@@ -12,6 +12,7 @@
 #import "UIImageView+WebCache.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
+#import "MBTopicCell.h"
 
 @interface MBWordViewController ()
 /** 帖子数据 */
@@ -29,6 +30,8 @@
 
 @implementation MBWordViewController
 
+static NSString * const MBTopicCellID = @"topic";
+
 - (NSMutableArray *)topics{
     if (!_topics) {
         _topics = [NSMutableArray array];
@@ -44,6 +47,7 @@
     // 添加刷新控件
     [self setRefresh];
 }
+
 - (void)setTableView{
     
     CGFloat bottom = self.tabBarController.tabBar.height;
@@ -54,6 +58,7 @@
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
 }
+
 - (void)setRefresh{
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     
@@ -87,7 +92,7 @@
             return ;
         }
         
-        MBLog(@"%s--responseObject = %@",__func__,responseObject);
+//        MBLog(@"%s--responseObject = %@",__func__,responseObject);
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         //将字典数组转成模型数组
@@ -151,31 +156,17 @@
         
         self.page--;
     }];
-    
-    
 }
+
 #pragma mark - Table view data source
-
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.topics.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *ID = @"topic";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
-    
-    MBTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] ];
+    MBTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:MBTopicCellID];
+    cell.topic = self.topics[indexPath.row];
     return cell;
 }
 

@@ -47,6 +47,8 @@
 		3AC509AC1D056A930074B28E /* MBPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC509AB1D056A930074B28E /* MBPushGuideView.m */; };
 		3AC509B01D056AAE0074B28E /* MBPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */; };
 		3AF62F681D0D565E0050FFBE /* MBTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F671D0D565E0050FFBE /* MBTopic.m */; };
+		3AF62F6C1D0D68680050FFBE /* MBTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F6A1D0D68680050FFBE /* MBTopicCell.m */; };
+		3AF62F6D1D0D68680050FFBE /* MBTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF62F6B1D0D68680050FFBE /* MBTopicCell.xib */; };
 		4C9415F2FA0B946DC1569F9D /* Pods_MBBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF922091BA7F35895CAF29F6 /* Pods_MBBS.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +149,9 @@
 		3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPushGuideView.xib; sourceTree = "<group>"; };
 		3AF62F661D0D565E0050FFBE /* MBTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTopic.h; sourceTree = "<group>"; };
 		3AF62F671D0D565E0050FFBE /* MBTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTopic.m; sourceTree = "<group>"; };
+		3AF62F691D0D68680050FFBE /* MBTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTopicCell.h; sourceTree = "<group>"; };
+		3AF62F6A1D0D68680050FFBE /* MBTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTopicCell.m; sourceTree = "<group>"; };
+		3AF62F6B1D0D68680050FFBE /* MBTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBTopicCell.xib; sourceTree = "<group>"; };
 		9A06C519DB4FAC17D69CE3C1 /* Pods-MBBS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBBS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBBS/Pods-MBBS.debug.xcconfig"; sourceTree = "<group>"; };
 		A3195EE78E988CA4E71C4046 /* Pods-MBBS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBBS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MBBS/Pods-MBBS.release.xcconfig"; sourceTree = "<group>"; };
 		CF922091BA7F35895CAF29F6 /* Pods_MBBS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBBS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,6 +412,9 @@
 				3A4835EC1D018ACC00B88FD7 /* MBEssenceTagsCell.h */,
 				3A4835ED1D018ACC00B88FD7 /* MBEssenceTagsCell.m */,
 				3A4835EE1D018ACC00B88FD7 /* MBEssenceTagsCell.xib */,
+				3AF62F691D0D68680050FFBE /* MBTopicCell.h */,
+				3AF62F6A1D0D68680050FFBE /* MBTopicCell.m */,
+				3AF62F6B1D0D68680050FFBE /* MBTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -599,6 +607,7 @@
 			files = (
 				3A9590E21CFEE36F005FA2B4 /* MBRecommendUserCell.xib in Resources */,
 				3A4835F01D018ACC00B88FD7 /* MBEssenceTagsCell.xib in Resources */,
+				3AF62F6D1D0D68680050FFBE /* MBTopicCell.xib in Resources */,
 				3A9590BC1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib in Resources */,
 				3ABE8AA01CFD3A670036C6CB /* Assets.xcassets in Resources */,
 				3ABE8A9E1CFD3A670036C6CB /* Main.storyboard in Resources */,
@@ -689,6 +698,7 @@
 				3A53961E1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m in Sources */,
 				3A27D0AA1D081CC9002A91C7 /* MBAllViewController.m in Sources */,
 				3A4835EB1D018A7300B88FD7 /* MBEssenceTags.m in Sources */,
+				3AF62F6C1D0D68680050FFBE /* MBTopicCell.m in Sources */,
 				3A886C121D052CC200865184 /* MBTextField.m in Sources */,
 				3A9590DA1CFEE194005FA2B4 /* MBRecommendUser.m in Sources */,
 				3ABE8A951CFD3A670036C6CB /* main.m in Sources */,
