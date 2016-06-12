@@ -46,6 +46,7 @@
 		3ABE8AAE1CFD3A680036C6CB /* MBBSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE8AAD1CFD3A680036C6CB /* MBBSTests.m */; };
 		3AC509AC1D056A930074B28E /* MBPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC509AB1D056A930074B28E /* MBPushGuideView.m */; };
 		3AC509B01D056AAE0074B28E /* MBPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */; };
+		3AF62F681D0D565E0050FFBE /* MBTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F671D0D565E0050FFBE /* MBTopic.m */; };
 		4C9415F2FA0B946DC1569F9D /* Pods_MBBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF922091BA7F35895CAF29F6 /* Pods_MBBS.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,8 @@
 		3AC509AA1D056A930074B28E /* MBPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPushGuideView.h; sourceTree = "<group>"; };
 		3AC509AB1D056A930074B28E /* MBPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPushGuideView.m; sourceTree = "<group>"; };
 		3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPushGuideView.xib; sourceTree = "<group>"; };
+		3AF62F661D0D565E0050FFBE /* MBTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTopic.h; sourceTree = "<group>"; };
+		3AF62F671D0D565E0050FFBE /* MBTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTopic.m; sourceTree = "<group>"; };
 		9A06C519DB4FAC17D69CE3C1 /* Pods-MBBS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBBS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBBS/Pods-MBBS.debug.xcconfig"; sourceTree = "<group>"; };
 		A3195EE78E988CA4E71C4046 /* Pods-MBBS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBBS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MBBS/Pods-MBBS.release.xcconfig"; sourceTree = "<group>"; };
 		CF922091BA7F35895CAF29F6 /* Pods_MBBS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBBS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -392,6 +395,8 @@
 			children = (
 				3A4835E91D018A7300B88FD7 /* MBEssenceTags.h */,
 				3A4835EA1D018A7300B88FD7 /* MBEssenceTags.m */,
+				3AF62F661D0D565E0050FFBE /* MBTopic.h */,
+				3AF62F671D0D565E0050FFBE /* MBTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -675,6 +680,7 @@
 			files = (
 				3A5396091CFD824600DB5724 /* MBMeController.m in Sources */,
 				3A53961B1CFD901300DB5724 /* UIView+MBExtension.m in Sources */,
+				3AF62F681D0D565E0050FFBE /* MBTopic.m in Sources */,
 				3A27D0B61D081DAA002A91C7 /* MBWordViewController.m in Sources */,
 				3A4835EF1D018ACC00B88FD7 /* MBEssenceTagsCell.m in Sources */,
 				071C1A3B1D030BD800E5B857 /* MBLoginRegisterController.m in Sources */,

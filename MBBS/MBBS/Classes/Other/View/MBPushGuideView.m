@@ -31,8 +31,8 @@
         [window addSubview:guideView];
         
         //存储版本号
-//        [[NSUserDefaults standardUserDefaults]setObject:currentVersion forKey:key];
-//        [[NSUserDefaults standardUserDefaults]synchronize];
+        [[NSUserDefaults standardUserDefaults]setObject:currentVersion forKey:key];
+        [[NSUserDefaults standardUserDefaults]synchronize];
     }
 
 }

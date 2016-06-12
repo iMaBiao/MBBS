@@ -87,9 +87,6 @@
     // 添加第一个控制器的view
     [self scrollViewDidEndScrollingAnimation:contentView];
     
-
-   
-    
 }
 #pragma mark - <UIScrollViewDelegate>
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
@@ -124,6 +121,7 @@
  */
 - (void)setTitlesView{
     
+    // 标签栏整体
     UIView *titleView = [[UIView alloc]init];
     titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.7];
     titleView.width = self.view.width;
@@ -136,19 +134,18 @@
     UIView *indicatorView = [[UIView alloc]init];
     indicatorView.backgroundColor = [UIColor redColor];
     indicatorView.height = 2;
+    indicatorView.tag = -1;
     indicatorView.y = titleView.height - indicatorView.height;
-    [titleView addSubview:indicatorView];
     self.indicatorView = indicatorView;
 
     
     NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     CGFloat width = titleView.width / titles.count;
     CGFloat height = titleView.height;
-    
     for (NSInteger i = 0; i < titles.count; i++) {
-        
 //        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         UIButton *button = [[UIButton alloc]init];
+        button.tag = i;
         button.height = height;
         button.width = width;
         button.x = i * width;
@@ -163,12 +160,13 @@
         if (i == 0) {
             button.enabled = NO;
             self.selectedButton = button;
-            
+            // 让按钮内部的label根据文字内容来计算尺寸
             [button.titleLabel sizeToFit];
             self.indicatorView.width = button.titleLabel.width;
             self.indicatorView.centerX = button.centerX;
         }
     }
+    [titleView addSubview:indicatorView];
 }
 - (void)titleClick:(UIButton *)button{
     
@@ -185,7 +183,7 @@
     
      // 滚动
     CGPoint  offset = self.contentView.contentOffset;
-    offset.x = button.tag *self.contentView.width;
+    offset.x = button.tag * self.contentView.width;
     [self.contentView setContentOffset:offset animated:YES];
     
 }

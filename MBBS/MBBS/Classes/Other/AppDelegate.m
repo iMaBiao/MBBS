@@ -31,6 +31,7 @@
     [self.window makeKeyAndVisible];
     
     self.window.userInteractionEnabled = YES;
+    
     // 显示推送引导
     [MBPushGuideView show];
     
