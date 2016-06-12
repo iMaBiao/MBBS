@@ -15,6 +15,7 @@
     return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass([MBPushGuideView class]) owner:nil options:nil]lastObject];
     
 }
+
 + (void)show{
     NSString *key  = @"CFBundleShortVersionString";
     //当前版本号
