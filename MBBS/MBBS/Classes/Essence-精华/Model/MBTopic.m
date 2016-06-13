@@ -10,6 +10,25 @@
 #import "MBTopic.h"
 
 @implementation MBTopic
+{
+    CGFloat _cellHeight;
+}
+
+- (CGFloat)cellHeight{
+    if (!_cellHeight) {
+        // 文字的最大尺寸
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4* 10, MAXFLOAT);
+        // 计算文字的高度
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+        
+//        NSLog(@"%s--textH = %f",__func__,textH);
+        // cell的高度
+        _cellHeight = 55  + 44 + 2 * 10 + textH;
+        
+//        NSLog(@"%s--cellHeight = %f",__func__,_cellHeight);
+    }
+    return _cellHeight;
+}
 
 - (NSString *)create_time{
     
@@ -39,7 +58,6 @@
     }else{  //非今年
         return _create_time;
     }
-    
 }
 
 @end

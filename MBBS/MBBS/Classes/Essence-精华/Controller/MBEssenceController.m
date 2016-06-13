@@ -49,22 +49,27 @@
 - (void)setChildViewControllers{
     MBTopicViewController *all = [[MBTopicViewController alloc]init];
     all.type = MBTopicTypeAll;
+    all.title = @"全部";
     [self addChildViewController:all];
     
     MBTopicViewController *video = [[MBTopicViewController alloc]init];
     video.type = MBTopicTypeVideo;
+    video.title = @"视频";
     [self addChildViewController:video];
     
     MBTopicViewController *voice = [[MBTopicViewController alloc]init];
     voice.type = MBTopicTypeVoice;
+    voice.title = @"声音";
     [self addChildViewController:voice];
     
     MBTopicViewController *picture = [[MBTopicViewController alloc]init];
     picture.type = MBTopicTypePicture;
+    picture.title = @"图片";
     [self addChildViewController:picture];
     
     MBTopicViewController *word = [[MBTopicViewController alloc]init];
     word.type = MBTopicTypeWord;
+    word.title = @"文字";
     [self addChildViewController:word];
 }
 

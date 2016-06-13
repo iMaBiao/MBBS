@@ -33,11 +33,6 @@
 
 static NSString * const MBTopicCellID = @"topic";
 
-//- (NSString *)type{
-//    return nil;
-//}
-
-
 - (NSMutableArray *)topics{
     if (!_topics) {
         _topics = [NSMutableArray array];
@@ -185,12 +180,14 @@ static NSString * const MBTopicCellID = @"topic";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MBTopic *topic = self.topics[indexPath.row];
-    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width -6*10, MAXFLOAT);
-    CGFloat textH =  [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName :[UIFont systemFontOfSize:14]} context:nil].size.height;
     
-    CGFloat cellH = 55 + textH + 44 + 4 *10 ;
+//    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4*10, MAXFLOAT);
+//    CGFloat textH =  [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName :[UIFont systemFontOfSize:14]} context:nil].size.height;
+//    
+//    CGFloat cellH = 55 + textH + 44 + 4 *10 ;
+//    NSLog(@"cellHeight = %f\n\n\n",topic.cellHeight); 
     
-    return cellH;
+    return topic.cellHeight;
 }
 
 
