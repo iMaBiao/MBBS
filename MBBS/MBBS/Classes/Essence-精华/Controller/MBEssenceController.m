@@ -8,12 +8,7 @@
 
 #import "MBEssenceController.h"
 #import "MBEssenceTagsController.h"
-
-#import "MBAllViewController.h"
-#import "MBWordViewController.h"
-#import "MBVideoViewController.h"
-#import "MBVoiceViewController.h"
-#import "MBPictureViewController.h"
+#import "MBTopicViewController.h"
 
 @interface MBEssenceController ()<UIScrollViewDelegate>
 /** 标签栏底部的红色指示器 */
@@ -52,19 +47,24 @@
  *  初始化子控制器
  */
 - (void)setChildViewControllers{
-    MBAllViewController *all = [[MBAllViewController alloc]init];
+    MBTopicViewController *all = [[MBTopicViewController alloc]init];
+    all.type = MBTopicTypeAll;
     [self addChildViewController:all];
     
-    MBVideoViewController *video = [[MBVideoViewController alloc]init];
+    MBTopicViewController *video = [[MBTopicViewController alloc]init];
+    video.type = MBTopicTypeVideo;
     [self addChildViewController:video];
     
-    MBVoiceViewController *voice = [[MBVoiceViewController alloc]init];
+    MBTopicViewController *voice = [[MBTopicViewController alloc]init];
+    voice.type = MBTopicTypeVoice;
     [self addChildViewController:voice];
     
-    MBPictureViewController *picture = [[MBPictureViewController alloc]init];
+    MBTopicViewController *picture = [[MBTopicViewController alloc]init];
+    picture.type = MBTopicTypePicture;
     [self addChildViewController:picture];
     
-    MBWordViewController *word = [[MBWordViewController alloc]init];
+    MBTopicViewController *word = [[MBTopicViewController alloc]init];
+    word.type = MBTopicTypeWord;
     [self addChildViewController:word];
 }
 

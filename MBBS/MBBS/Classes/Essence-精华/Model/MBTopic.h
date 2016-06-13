@@ -33,5 +33,6 @@
 
 /** 评论的数量 */
 @property (nonatomic, assign) NSInteger comment;
-
+/** 是否为新浪加V用户 */
+@property(nonatomic,assign,getter=isSina_V)BOOL sina_v;
 @end

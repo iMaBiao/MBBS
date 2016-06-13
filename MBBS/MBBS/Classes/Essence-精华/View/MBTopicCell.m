@@ -27,7 +27,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 /** 关注 */
 @property (weak, nonatomic) IBOutlet UIButton *attentionButton;
+/** 新浪加V */
+@property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
 
+@property (weak, nonatomic) IBOutlet UILabel *text_Label;
 
 @end
 
@@ -44,6 +47,8 @@
 - (void)setTopic:(MBTopic *)topic{
     _topic = topic;
     
+    self.sinaVView.hidden = !topic.isSina_V;
+    
     // 设置其他控件
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
@@ -55,7 +60,8 @@
     [self setButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setButtonTitle:self.commentButton count:topic.comment placeholder:@"转发"];
-    
+ 
+    self.text_Label.text = topic.text;
 }
 
 /**

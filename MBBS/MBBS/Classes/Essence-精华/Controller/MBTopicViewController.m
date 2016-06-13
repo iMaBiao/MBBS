@@ -1,12 +1,12 @@
 //
-//  MBWordViewController.m
+//  MBTopicViewController.m
 //  MBBS
 //
-//  Created by 浩渺 on 16/6/8.
+//  Created by 浩渺 on 16/6/13.
 //  Copyright © 2016年 biao. All rights reserved.
 //
 
-#import "MBWordViewController.h"
+#import "MBTopicViewController.h"
 #import "MBTopic.h"
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
@@ -14,7 +14,7 @@
 #import "MJRefresh.h"
 #import "MBTopicCell.h"
 
-@interface MBWordViewController ()
+@interface MBTopicViewController()
 /** 帖子数据 */
 @property(nonatomic,strong)NSMutableArray *topics;
 
@@ -26,11 +26,17 @@
 
 /** 上一次的请求参数 */
 @property(nonatomic,strong)NSDictionary *params;
+
 @end
 
-@implementation MBWordViewController
+@implementation MBTopicViewController
 
 static NSString * const MBTopicCellID = @"topic";
+
+//- (NSString *)type{
+//    return nil;
+//}
+
 
 - (NSMutableArray *)topics{
     if (!_topics) {
@@ -42,7 +48,7 @@ static NSString * const MBTopicCellID = @"topic";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-     // 初始化表格
+    // 初始化表格
     [self setTableView];
     // 添加刷新控件
     [self setRefresh];
@@ -93,11 +99,11 @@ static NSString * const MBTopicCellID = @"topic";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        if (self.params != params) {
+        if (self.params != params) {//如果同时发送两个请求，参数就会不同，就会停止发送第一个请求
             return ;
         }
         
-//        MBLog(@"%s--responseObject = %@",__func__,responseObject);
+        //        MBLog(@"%s--responseObject = %@",__func__,responseObject);
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         //将字典数组转成模型数组
@@ -177,6 +183,15 @@ static NSString * const MBTopicCellID = @"topic";
 }
 #pragma mark - Table view Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    
+    MBTopic *topic = self.topics[indexPath.row];
+    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width -6*10, MAXFLOAT);
+    CGFloat textH =  [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName :[UIFont systemFontOfSize:14]} context:nil].size.height;
+    
+    CGFloat cellH = 55 + textH + 44 + 4 *10 ;
+    
+    return cellH;
 }
+
+
 @end
