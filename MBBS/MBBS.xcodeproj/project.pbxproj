@@ -16,6 +16,7 @@
 		3A27D0B31D081D9D002A91C7 /* MBPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A27D0B21D081D9D002A91C7 /* MBPictureViewController.m */; };
 		3A27D0B61D081DAA002A91C7 /* MBWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A27D0B51D081DAA002A91C7 /* MBWordViewController.m */; };
 		3A3093271CFD3D0A0004F6AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3093261CFD3D0A0004F6AF /* AppDelegate.m */; };
+		3A35FD4C1D0E8D4F006E810F /* NSDate+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A35FD4B1D0E8D4F006E810F /* NSDate+MBExtension.m */; };
 		3A4835E81D018A5700B88FD7 /* MBEssenceTagsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4835E71D018A5700B88FD7 /* MBEssenceTagsController.m */; };
 		3A4835EB1D018A7300B88FD7 /* MBEssenceTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4835EA1D018A7300B88FD7 /* MBEssenceTags.m */; };
 		3A4835EF1D018ACC00B88FD7 /* MBEssenceTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4835ED1D018ACC00B88FD7 /* MBEssenceTagsCell.m */; };
@@ -87,6 +88,8 @@
 		3A27D0B51D081DAA002A91C7 /* MBWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBWordViewController.m; sourceTree = "<group>"; };
 		3A3093251CFD3D0A0004F6AF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A3093261CFD3D0A0004F6AF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3A35FD4A1D0E8D4F006E810F /* NSDate+MBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MBExtension.h"; sourceTree = "<group>"; };
+		3A35FD4B1D0E8D4F006E810F /* NSDate+MBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MBExtension.m"; sourceTree = "<group>"; };
 		3A4835E61D018A5700B88FD7 /* MBEssenceTagsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEssenceTagsController.h; sourceTree = "<group>"; };
 		3A4835E71D018A5700B88FD7 /* MBEssenceTagsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEssenceTagsController.m; sourceTree = "<group>"; };
 		3A4835E91D018A7300B88FD7 /* MBEssenceTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEssenceTags.h; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				3A53961A1CFD901300DB5724 /* UIView+MBExtension.m */,
 				3A53961C1CFD969900DB5724 /* UIBarButtonItem+MBExtension.h */,
 				3A53961D1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m */,
+				3A35FD4A1D0E8D4F006E810F /* NSDate+MBExtension.h */,
+				3A35FD4B1D0E8D4F006E810F /* NSDate+MBExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -692,6 +697,7 @@
 				3AF62F681D0D565E0050FFBE /* MBTopic.m in Sources */,
 				3A27D0B61D081DAA002A91C7 /* MBWordViewController.m in Sources */,
 				3A4835EF1D018ACC00B88FD7 /* MBEssenceTagsCell.m in Sources */,
+				3A35FD4C1D0E8D4F006E810F /* NSDate+MBExtension.m in Sources */,
 				071C1A3B1D030BD800E5B857 /* MBLoginRegisterController.m in Sources */,
 				3A53960F1CFD827C00DB5724 /* MBNewController.m in Sources */,
 				0708BB821D03150800EC5292 /* MBVerticalButtton.m in Sources */,

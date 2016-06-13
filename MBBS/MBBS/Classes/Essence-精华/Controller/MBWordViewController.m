@@ -57,6 +57,11 @@ static NSString * const MBTopicCellID = @"topic";
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor  = [UIColor clearColor];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MBTopicCell class]) bundle:nil] forCellReuseIdentifier:MBTopicCellID];
+    
 }
 
 - (void)setRefresh{
@@ -166,8 +171,12 @@ static NSString * const MBTopicCellID = @"topic";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MBTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:MBTopicCellID];
+    
     cell.topic = self.topics[indexPath.row];
     return cell;
 }
-
+#pragma mark - Table view Delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 200;
+}
 @end
