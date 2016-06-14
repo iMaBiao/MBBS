@@ -43,6 +43,7 @@
 		3ABE8AAE1CFD3A680036C6CB /* MBBSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE8AAD1CFD3A680036C6CB /* MBBSTests.m */; };
 		3AC509AC1D056A930074B28E /* MBPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC509AB1D056A930074B28E /* MBPushGuideView.m */; };
 		3AC509B01D056AAE0074B28E /* MBPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */; };
+		3AE777FC1D0FA4BD00392A06 /* MBConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE777FB1D0FA4BD00392A06 /* MBConst.m */; };
 		3AF62F681D0D565E0050FFBE /* MBTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F671D0D565E0050FFBE /* MBTopic.m */; };
 		3AF62F6C1D0D68680050FFBE /* MBTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F6A1D0D68680050FFBE /* MBTopicCell.m */; };
 		3AF62F6D1D0D68680050FFBE /* MBTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF62F6B1D0D68680050FFBE /* MBTopicCell.xib */; };
@@ -138,6 +139,8 @@
 		3AC509AA1D056A930074B28E /* MBPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPushGuideView.h; sourceTree = "<group>"; };
 		3AC509AB1D056A930074B28E /* MBPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPushGuideView.m; sourceTree = "<group>"; };
 		3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPushGuideView.xib; sourceTree = "<group>"; };
+		3AE777FA1D0FA4BD00392A06 /* MBConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBConst.h; sourceTree = "<group>"; };
+		3AE777FB1D0FA4BD00392A06 /* MBConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBConst.m; sourceTree = "<group>"; };
 		3AF62F661D0D565E0050FFBE /* MBTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTopic.h; sourceTree = "<group>"; };
 		3AF62F671D0D565E0050FFBE /* MBTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTopic.m; sourceTree = "<group>"; };
 		3AF62F691D0D68680050FFBE /* MBTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTopicCell.h; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 				3A5395FA1CFD6A1600DB5724 /* PrefixHeader.pch */,
 				3ABE8A941CFD3A670036C6CB /* main.m */,
 				3A9590D61CFEDB3A005FA2B4 /* NSDictionary+MBLog.m */,
+				3AE777FA1D0FA4BD00392A06 /* MBConst.h */,
+				3AE777FB1D0FA4BD00392A06 /* MBConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -686,6 +691,7 @@
 				3A886C121D052CC200865184 /* MBTextField.m in Sources */,
 				3A9590DA1CFEE194005FA2B4 /* MBRecommendUser.m in Sources */,
 				3ABE8A951CFD3A670036C6CB /* main.m in Sources */,
+				3AE777FC1D0FA4BD00392A06 /* MBConst.m in Sources */,
 				3A9590D11CFECB72005FA2B4 /* MBRecommendCategory.m in Sources */,
 				3A3093271CFD3D0A0004F6AF /* AppDelegate.m in Sources */,
 				3A9590CD1CFECABC005FA2B4 /* MBRecommendCategoryCell.m in Sources */,

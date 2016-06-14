@@ -15,8 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *subNumberLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageListImageView;
 
-
-
 @end
 
 @implementation MBEssenceTagsCell

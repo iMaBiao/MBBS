@@ -77,12 +77,11 @@
 }
 
 - (void)setFrame:(CGRect)frame{
-    
-    static CGFloat margin = 10;
-    frame.origin.x = margin;
-    frame.size.width -= 2*margin;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+
+    frame.origin.x = MBTopicCellMargin;
+    frame.size.width -=  2 * MBTopicCellMargin;
+    frame.size.height -= MBTopicCellMargin;
+    frame.origin.y += MBTopicCellMargin;
     
     [super setFrame:frame];
 }

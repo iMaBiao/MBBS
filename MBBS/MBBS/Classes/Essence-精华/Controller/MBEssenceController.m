@@ -130,8 +130,8 @@
     UIView *titleView = [[UIView alloc]init];
     titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.7];
     titleView.width = self.view.width;
-    titleView.height  = 35;
-    titleView.y = 64;
+    titleView.height  = MBTitleViewH;
+    titleView.y = MBTitleViewY;
     [self.view addSubview:titleView];
     self.titlesView = titleView;
     

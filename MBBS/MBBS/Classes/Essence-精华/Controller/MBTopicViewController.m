@@ -80,6 +80,7 @@ static NSString * const MBTopicCellID = @"topic";
  * 加载新的数据
  */
 - (void)loadNewTopics{
+    //下拉就停止上拉加载
     [self.tableView.mj_footer endRefreshing];
     
     //参数
@@ -123,9 +124,8 @@ static NSString * const MBTopicCellID = @"topic";
  * 加载更多数据
  */
 - (void)loadMoreTopics{
-    
+//    上拉就停止下拉刷新
     [self.tableView.mj_header endRefreshing];
-    
     self.page++;
     
     //参数
