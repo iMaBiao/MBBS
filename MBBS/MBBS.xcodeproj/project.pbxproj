@@ -44,6 +44,8 @@
 		3AC509AC1D056A930074B28E /* MBPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC509AB1D056A930074B28E /* MBPushGuideView.m */; };
 		3AC509B01D056AAE0074B28E /* MBPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */; };
 		3AE777FC1D0FA4BD00392A06 /* MBConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE777FB1D0FA4BD00392A06 /* MBConst.m */; };
+		3AE778211D10082900392A06 /* MBTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE778201D10082900392A06 /* MBTopicPictureView.m */; };
+		3AE778231D10083400392A06 /* MBTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE778221D10083400392A06 /* MBTopicPictureView.xib */; };
 		3AF62F681D0D565E0050FFBE /* MBTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F671D0D565E0050FFBE /* MBTopic.m */; };
 		3AF62F6C1D0D68680050FFBE /* MBTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F6A1D0D68680050FFBE /* MBTopicCell.m */; };
 		3AF62F6D1D0D68680050FFBE /* MBTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF62F6B1D0D68680050FFBE /* MBTopicCell.xib */; };
@@ -141,6 +143,9 @@
 		3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPushGuideView.xib; sourceTree = "<group>"; };
 		3AE777FA1D0FA4BD00392A06 /* MBConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBConst.h; sourceTree = "<group>"; };
 		3AE777FB1D0FA4BD00392A06 /* MBConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBConst.m; sourceTree = "<group>"; };
+		3AE7781F1D10082900392A06 /* MBTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTopicPictureView.h; sourceTree = "<group>"; };
+		3AE778201D10082900392A06 /* MBTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTopicPictureView.m; sourceTree = "<group>"; };
+		3AE778221D10083400392A06 /* MBTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBTopicPictureView.xib; sourceTree = "<group>"; };
 		3AF62F661D0D565E0050FFBE /* MBTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTopic.h; sourceTree = "<group>"; };
 		3AF62F671D0D565E0050FFBE /* MBTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTopic.m; sourceTree = "<group>"; };
 		3AF62F691D0D68680050FFBE /* MBTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTopicCell.h; sourceTree = "<group>"; };
@@ -405,6 +410,9 @@
 				3AF62F691D0D68680050FFBE /* MBTopicCell.h */,
 				3AF62F6A1D0D68680050FFBE /* MBTopicCell.m */,
 				3AF62F6B1D0D68680050FFBE /* MBTopicCell.xib */,
+				3AE7781F1D10082900392A06 /* MBTopicPictureView.h */,
+				3AE778201D10082900392A06 /* MBTopicPictureView.m */,
+				3AE778221D10083400392A06 /* MBTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -597,6 +605,7 @@
 			files = (
 				3A9590E21CFEE36F005FA2B4 /* MBRecommendUserCell.xib in Resources */,
 				3A4835F01D018ACC00B88FD7 /* MBEssenceTagsCell.xib in Resources */,
+				3AE778231D10083400392A06 /* MBTopicPictureView.xib in Resources */,
 				3AF62F6D1D0D68680050FFBE /* MBTopicCell.xib in Resources */,
 				3A9590BC1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib in Resources */,
 				3ABE8AA01CFD3A670036C6CB /* Assets.xcassets in Resources */,
@@ -695,6 +704,7 @@
 				3A9590D11CFECB72005FA2B4 /* MBRecommendCategory.m in Sources */,
 				3A3093271CFD3D0A0004F6AF /* AppDelegate.m in Sources */,
 				3A9590CD1CFECABC005FA2B4 /* MBRecommendCategoryCell.m in Sources */,
+				3AE778211D10082900392A06 /* MBTopicPictureView.m in Sources */,
 				3A5396121CFD829000DB5724 /* MBEssenceController.m in Sources */,
 				3A9590D71CFEDB3A005FA2B4 /* NSDictionary+MBLog.m in Sources */,
 				3A53960C1CFD826300DB5724 /* MBFriendTrendsController.m in Sources */,

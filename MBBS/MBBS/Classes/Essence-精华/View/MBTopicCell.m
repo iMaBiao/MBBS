@@ -9,6 +9,7 @@
 #import "MBTopicCell.h"
 #import "MBTopic.h"
 #import "UIImageView+WebCache.h"
+#import "MBTopicPictureView.h"
 
 @interface MBTopicCell()
 /** 头像 */
@@ -29,12 +30,24 @@
 @property (weak, nonatomic) IBOutlet UIButton *attentionButton;
 /** 新浪加V */
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
-
+/** 帖子的文字内容 */
 @property (weak, nonatomic) IBOutlet UILabel *text_Label;
+
+/** 图片帖子中间的内容 */
+@property(nonatomic,weak)MBTopicPictureView *pictureView;
 
 @end
 
 @implementation MBTopicCell
+
+- (MBTopicPictureView *)pictureView{
+    if (!_pictureView) {
+        MBTopicPictureView *pictureView = [MBTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -60,8 +73,17 @@
     [self setButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setButtonTitle:self.commentButton count:topic.comment placeholder:@"转发"];
- 
+    
+    //文字内容
     self.text_Label.text = topic.text;
+    
+    // 根据模型类型(帖子类型)添加对应的内容到cell的中间
+    if (topic.type == MBTopicTypePicture) {
+        self.pictureView.topic = topic;
+        self.pictureView.frame = topic.pictureF;
+    }else if(topic.type == MBTopicTypeVideo){
+        
+    }
 }
 
 /**

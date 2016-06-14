@@ -10,3 +10,7 @@ CGFloat const MBTopicCellMargin = 10;
 CGFloat const MBTopicCellTextY = 55;
 
 CGFloat const MBTopicCellBottomBarH = 44;
+
+CGFloat const MBTopicCellPictureH = 1000;
+
+CGFloat const MBTopicCellPictureBreakH = 250;

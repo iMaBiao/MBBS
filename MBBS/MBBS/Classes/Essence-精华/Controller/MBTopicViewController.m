@@ -47,6 +47,7 @@ static NSString * const MBTopicCellID = @"topic";
     [self setTableView];
     // 添加刷新控件
     [self setRefresh];
+
 }
 
 - (void)setTableView{

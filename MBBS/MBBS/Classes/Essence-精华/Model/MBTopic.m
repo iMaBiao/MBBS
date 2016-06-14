@@ -15,15 +15,18 @@
 //因为cellHeigit是readonly，Xcode会默认生成生成getter方法和_cellHeight,但是重写了getter方法，就不会自动生成_cellHeight了，所有要自己补充上去
 {
     CGFloat _cellHeight;
+    CGRect _pictureF;
 }
 
 //因为模型属性名与服务器返回的属性名不一致，需要重写这个方法替换属性名
 //将属性名换为其他key去字典中取值
-//+ (NSDictionary *)mj_replacedKeyFromPropertyName{
-//    return @{
-//             @"ID":@"id",
-//             };
-//}
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{
+             @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2"
+             };
+}
 //一对一的将属性名换为其他key去字典中取值
 //+ (NSString *)mj_replacedKeyFromPropertyName121:(NSString *)propertyName{
 //    return propertyName;
@@ -31,12 +34,29 @@
 
 - (CGFloat)cellHeight{
     if (!_cellHeight) {
+        
         // 文字的最大尺寸
-        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4* MBTopicCellMargin, MAXFLOAT);
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * MBTopicCellMargin, MAXFLOAT);
+        
         // 计算文字的高度
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
 
         // cell的高度
+        //文字部分 ==  文字的Y + 文字的H  + margin
+        _cellHeight = MBTopicCellTextY + textH + MBTopicCellMargin;
+        
+        // 根据段子的类型来计算cell的高度
+        if (self.type == MBTopicTypePicture ) {//图片
+            
+            CGFloat pictureW = maxSize.width;
+            //显示出来的高度
+//            CGFloat pictureH = pictureW * self.large_image / self.width;
+            
+//            if (pictureH >= MBTopicCellPictureH) {// 图片高度过长
+//                pictureH = MBTopicCellPictureBreakH;
+//                self.bigPicture = YES;
+//            }
+        }
         _cellHeight = MBTopicCellTextY  + MBTopicCellBottomBarH + 3 * MBTopicCellMargin + textH;
         
         NSLog(@"text = %@\n\n",self.text);
