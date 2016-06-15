@@ -25,7 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     UIImageView *imageView = [[UIImageView alloc]init];
     imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(back)];
@@ -35,7 +34,7 @@
     
     CGFloat pictureW = theWidth;
 //nowW     nowH
-//lastW   lastH
+//lastW   lastH  交叉相乘
     CGFloat pictureH = pictureW * self.topic.height / self.topic.width;
     if (pictureH >= theHeight) {
         // 图片显示高度超过一个屏幕, 需要滚动查看

@@ -26,6 +26,8 @@
 		3A5396181CFD8B6100DB5724 /* MBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5396171CFD8B6100DB5724 /* MBTabBar.m */; };
 		3A53961B1CFD901300DB5724 /* UIView+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53961A1CFD901300DB5724 /* UIView+MBExtension.m */; };
 		3A53961E1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53961D1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m */; };
+		3A5F0FD41D1148B4004F7D78 /* MBPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F0FD21D1148B4004F7D78 /* MBPublishViewController.m */; };
+		3A5F0FD51D1148B4004F7D78 /* MBPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F0FD31D1148B4004F7D78 /* MBPublishViewController.xib */; };
 		3A886C121D052CC200865184 /* MBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A886C111D052CC200865184 /* MBTextField.m */; };
 		3A9590BC1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9590BB1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib */; };
 		3A9590C31CFEC375005FA2B4 /* MBRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9590C11CFEC375005FA2B4 /* MBRecommendController.m */; };
@@ -110,6 +112,9 @@
 		3A53961A1CFD901300DB5724 /* UIView+MBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MBExtension.m"; sourceTree = "<group>"; };
 		3A53961C1CFD969900DB5724 /* UIBarButtonItem+MBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+MBExtension.h"; sourceTree = "<group>"; };
 		3A53961D1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MBExtension.m"; sourceTree = "<group>"; };
+		3A5F0FD11D1148B4004F7D78 /* MBPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPublishViewController.h; sourceTree = "<group>"; };
+		3A5F0FD21D1148B4004F7D78 /* MBPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPublishViewController.m; sourceTree = "<group>"; };
+		3A5F0FD31D1148B4004F7D78 /* MBPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPublishViewController.xib; sourceTree = "<group>"; };
 		3A886C101D052CC200865184 /* MBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTextField.h; sourceTree = "<group>"; };
 		3A886C111D052CC200865184 /* MBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTextField.m; sourceTree = "<group>"; };
 		3A9590B31CFEB61F005FA2B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -266,6 +271,9 @@
 				3A5395F61CFD69C000DB5724 /* MBTabBarController.m */,
 				3A5396131CFD882D00DB5724 /* MBNavigationController.h */,
 				3A5396141CFD882D00DB5724 /* MBNavigationController.m */,
+				3A5F0FD11D1148B4004F7D78 /* MBPublishViewController.h */,
+				3A5F0FD21D1148B4004F7D78 /* MBPublishViewController.m */,
+				3A5F0FD31D1148B4004F7D78 /* MBPublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -622,6 +630,7 @@
 				3AF62F6D1D0D68680050FFBE /* MBTopicCell.xib in Resources */,
 				3AFA59EC1D10FB1400899A08 /* MBShowPictureController.xib in Resources */,
 				3A9590BC1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib in Resources */,
+				3A5F0FD51D1148B4004F7D78 /* MBPublishViewController.xib in Resources */,
 				3ABE8AA01CFD3A670036C6CB /* Assets.xcassets in Resources */,
 				3ABE8A9E1CFD3A670036C6CB /* Main.storyboard in Resources */,
 				3A9590CE1CFECABC005FA2B4 /* MBRecommendCategoryCell.xib in Resources */,
@@ -731,6 +740,7 @@
 				3A9590E11CFEE36F005FA2B4 /* MBRecommendUserCell.m in Sources */,
 				3A35FD4F1D0E9893006E810F /* MBTopicViewController.m in Sources */,
 				3A4835E81D018A5700B88FD7 /* MBEssenceTagsController.m in Sources */,
+				3A5F0FD41D1148B4004F7D78 /* MBPublishViewController.m in Sources */,
 				3A9590C31CFEC375005FA2B4 /* MBRecommendController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
