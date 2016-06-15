@@ -21,11 +21,7 @@
     // 让控制器的view不能被点击
     self.view.userInteractionEnabled = NO;
     
-    // 添加标语
-    UIImageView *sloganView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"app_slogan"]];
-    sloganView.y = theHeight * 0.2;
-    sloganView.centerX = theWidth * 0.5;
-    [self.view addSubview:sloganView];
+
     
     //数据
     NSArray *images = @[@"publish-video", @"publish-picture", @"publish-text", @"publish-audio", @"publish-review", @"publish-offline"];
@@ -40,6 +36,9 @@
     CGFloat xMargin = (theWidth - 2 * buttonStartX - maxCols * buttonW) / (maxCols -1);
     for (int i = 0; i < images.count; i++) {
         MBVerticalButtton *button = [[MBVerticalButtton alloc]init];
+        button.tag = i;
+        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
         
         //设置内容
         button.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -47,19 +46,78 @@
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
         
-        //设置frame
-        button.width = buttonW;
-        button.height = buttonH;
-        int row  = i / maxCols;
-        int col = i % maxCols;
-        button.x = buttonStartX + col * (xMargin + buttonW);
-        button.y = buttonStartY + row * buttonH ;
+//        //设置frame
+//        button.width = buttonW;
+//        button.height = buttonH;
+//        int row  = i / maxCols;
+//        int col = i % maxCols;
+//        button.x = buttonStartX + col * (xMargin + buttonW);
+//        button.y = buttonStartY + row * buttonH ;
         
-        [self.view addSubview:button];
+        //计算X Y
+        int row = i / maxCols;
+        int col = i % maxCols;
+        CGFloat buttonX = buttonStartX + col * (xMargin + buttonW);
+        CGFloat buttonEndY =  buttonStartY  + row * buttonH;
+        CGFloat buttonBeginY = buttonEndY - theHeight;
+        
+        //按钮动画
+        POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+        animation.fromValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonBeginY, buttonW, buttonH)];
+        animation.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonEndY, buttonW, buttonH)];
+        
+        animation.springBounciness = 10;
+        animation.springSpeed  = 10;
+        animation.beginTime = CACurrentMediaTime() + 0.1 * i;
+        [button pop_addAnimation:animation forKey:nil];
     }
+    
+    // 添加标语
+    UIImageView *sloganView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"app_slogan"]];
+    //    sloganView.y = theHeight * 0.2;
+    //    sloganView.centerX = theWidth * 0.5;
+    [self.view addSubview:sloganView];
+    
+    //标语动画
+    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+    CGFloat centerX = theWidth * 0.5;
+    CGFloat centerEndY = theHeight * 0.2;
+    CGFloat centerBeginY = centerEndY - theHeight;
+    animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerBeginY)];
+    animation.toValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerEndY)];
+    animation.beginTime = CACurrentMediaTime() + images.count * 0.1;
+    animation.springBounciness  = 10;
+    animation.springSpeed = 10;
+    [animation setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
+       // 标语动画执行完毕, 恢复点击事件
+        self.view.userInteractionEnabled = YES;
+    }];
+    
+    [sloganView pop_addAnimation:animation forKey:nil];
+    
+}
+-(void)buttonClick:(UIButton *)button{
+    [self cancleWithCompletionBlock:^{
+        
+    }];
 }
 
 
+- (void)cancleWithCompletionBlock:(void(^)())completionBlock{
+    //让控制器不能被点击
+    self.view.userInteractionEnabled = NO;
+    int beginIndex = 2;
+    
+    for (int i = beginIndex; i< self.view.subviews.count; i++) {
+        UIView  *subView = self.view.subviews[i];
+        //基本动画
+//        POPBaseAnimation *animation = [POPBaseAnimation ]
+    }
+}
+
+/**
+ *  关闭页面
+ */
 - (IBAction)cancel{
     [self dismissViewControllerAnimated:YES completion:nil];
 }

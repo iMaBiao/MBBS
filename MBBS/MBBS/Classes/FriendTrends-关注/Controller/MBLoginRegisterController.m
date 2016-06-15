@@ -62,9 +62,6 @@
     [UIView animateWithDuration:0.25 animations:^{
         [self.view layoutIfNeeded];
     }];
-    
-    self.zhuce.backgroundColor = [UIColor redColor];
-    MBLog(@"zhuce = %@",self.zhuce);
 }
 
 

@@ -47,7 +47,7 @@
                         <action selector="showLoginOrRegister:" destination="-1" eventType="touchUpInside" id="e6a-3a-VBD"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQS-1o-i7N">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQS-1o-i7N" userLabel="快速登录">
                     <rect key="frame" x="0.0" y="450" width="600" height="150"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_left_line" translatesAutoresizingMaskIntoConstraints="NO" id="nmZ-1K-TqN" userLabel="左边线">
@@ -264,16 +264,9 @@
                 <constraint firstItem="anq-cU-nOG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="3la-ty-UGj"/>
                 <constraint firstItem="Fx2-QS-s59" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4XJ-dR-gCv"/>
                 <constraint firstAttribute="trailing" secondItem="r4E-tN-sRZ" secondAttribute="trailing" constant="15" id="85t-nw-3xg"/>
-                <constraint firstItem="5QP-gY-25s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="99I-Pd-Hj2">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </constraint>
+                <constraint firstItem="5QP-gY-25s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="99I-Pd-Hj2"/>
+                <constraint firstItem="LKS-22-dg4" firstAttribute="width" secondItem="5QP-gY-25s" secondAttribute="width" id="AeC-23-N7N"/>
                 <constraint firstItem="Fx2-QS-s59" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="BkM-U5-c2H"/>
-                <constraint firstItem="LKS-22-dg4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="CLM-qR-9Za"/>
                 <constraint firstItem="r4E-tN-sRZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="Dgb-JN-nOH"/>
                 <constraint firstItem="LKS-22-dg4" firstAttribute="leading" secondItem="5QP-gY-25s" secondAttribute="trailing" id="ERL-PP-s1Q"/>
                 <constraint firstAttribute="trailing" secondItem="5QP-gY-25s" secondAttribute="trailing" id="MBh-FY-tbH"/>
@@ -284,6 +277,7 @@
                 <constraint firstAttribute="trailing" secondItem="QQS-1o-i7N" secondAttribute="trailing" id="mPZ-tC-5eM"/>
                 <constraint firstItem="Fx2-QS-s59" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="r9d-d8-wqC"/>
                 <constraint firstAttribute="bottom" secondItem="QQS-1o-i7N" secondAttribute="bottom" id="tDa-Ao-MlS"/>
+                <constraint firstItem="5QP-gY-25s" firstAttribute="width" secondItem="Fx2-QS-s59" secondAttribute="width" id="v2n-Ig-icM"/>
             </constraints>
             <point key="canvasLocation" x="-1871" y="553"/>
         </view>

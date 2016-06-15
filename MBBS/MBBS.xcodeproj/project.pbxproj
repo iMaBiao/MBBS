@@ -28,6 +28,7 @@
 		3A53961E1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53961D1CFD969900DB5724 /* UIBarButtonItem+MBExtension.m */; };
 		3A5F0FD41D1148B4004F7D78 /* MBPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F0FD21D1148B4004F7D78 /* MBPublishViewController.m */; };
 		3A5F0FD51D1148B4004F7D78 /* MBPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F0FD31D1148B4004F7D78 /* MBPublishViewController.xib */; };
+		3A5F0FD71D115663004F7D78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5F0FD61D115663004F7D78 /* QuartzCore.framework */; };
 		3A886C121D052CC200865184 /* MBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A886C111D052CC200865184 /* MBTextField.m */; };
 		3A9590BC1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9590BB1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib */; };
 		3A9590C31CFEC375005FA2B4 /* MBRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9590C11CFEC375005FA2B4 /* MBRecommendController.m */; };
@@ -115,6 +116,7 @@
 		3A5F0FD11D1148B4004F7D78 /* MBPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPublishViewController.h; sourceTree = "<group>"; };
 		3A5F0FD21D1148B4004F7D78 /* MBPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPublishViewController.m; sourceTree = "<group>"; };
 		3A5F0FD31D1148B4004F7D78 /* MBPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPublishViewController.xib; sourceTree = "<group>"; };
+		3A5F0FD61D115663004F7D78 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3A886C101D052CC200865184 /* MBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTextField.h; sourceTree = "<group>"; };
 		3A886C111D052CC200865184 /* MBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTextField.m; sourceTree = "<group>"; };
 		3A9590B31CFEB61F005FA2B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5F0FD71D115663004F7D78 /* QuartzCore.framework in Frameworks */,
 				4C9415F2FA0B946DC1569F9D /* Pods_MBBS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +512,7 @@
 		C3289CF7839633EE2DAC0238 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A5F0FD61D115663004F7D78 /* QuartzCore.framework */,
 				3A9590B71CFEB632005FA2B4 /* UIKit.framework */,
 				3A9590B51CFEB629005FA2B4 /* Foundation.framework */,
 				3A9590B31CFEB61F005FA2B4 /* CoreGraphics.framework */,

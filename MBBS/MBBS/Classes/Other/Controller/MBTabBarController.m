@@ -40,13 +40,13 @@
     [tabBarItem setTitleTextAttributes:selectAttrs forState:UIControlStateSelected];
     
 
-    [self addChildsViewController:[[MBEssenceController alloc]init] title:@"essence" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self addChildsViewController:[[MBEssenceController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
 
-   [self addChildsViewController:[[MBNewController alloc]init] title:@"new" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+   [self addChildsViewController:[[MBNewController alloc]init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    [self addChildsViewController:[[MBFriendTrendsController alloc]init] title:@"friendTrends" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self addChildsViewController:[[MBFriendTrendsController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
-    [self addChildsViewController:[[MBMeController alloc]init] title:@"me" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self addChildsViewController:[[MBMeController alloc]init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
     // 更换系统自带的tabBar
     [self setValue:[[MBTabBar alloc]init] forKeyPath:@"tabBar"];
