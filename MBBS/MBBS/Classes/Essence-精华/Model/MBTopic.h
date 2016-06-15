@@ -44,6 +44,11 @@
 /** 帖子的类型 */
 @property(nonatomic,assign)MBTopicType type;
 
+/** 图片的宽度 */
+@property(nonatomic,assign)CGFloat width;
+/** 图片的高度 */
+@property(nonatomic,assign)CGFloat height;
+
 /****** 额外的辅助属性 ******/
 
 /** cell的高度 */
@@ -54,4 +59,7 @@
 
 /** 图片控件的frame */
 @property(nonatomic,assign,readonly)CGRect pictureF;
+
+/** 图片的下载进度 */
+@property(nonatomic,assign)CGFloat pictureProgress;
 @end

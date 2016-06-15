@@ -49,6 +49,9 @@
 		3AF62F681D0D565E0050FFBE /* MBTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F671D0D565E0050FFBE /* MBTopic.m */; };
 		3AF62F6C1D0D68680050FFBE /* MBTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF62F6A1D0D68680050FFBE /* MBTopicCell.m */; };
 		3AF62F6D1D0D68680050FFBE /* MBTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF62F6B1D0D68680050FFBE /* MBTopicCell.xib */; };
+		3AFA59E41D10F5C700899A08 /* MBProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA59E31D10F5C700899A08 /* MBProgressView.m */; };
+		3AFA59EB1D10FB1400899A08 /* MBShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA59E91D10FB1400899A08 /* MBShowPictureController.m */; };
+		3AFA59EC1D10FB1400899A08 /* MBShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA59EA1D10FB1400899A08 /* MBShowPictureController.xib */; };
 		4C9415F2FA0B946DC1569F9D /* Pods_MBBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF922091BA7F35895CAF29F6 /* Pods_MBBS.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +154,11 @@
 		3AF62F691D0D68680050FFBE /* MBTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTopicCell.h; sourceTree = "<group>"; };
 		3AF62F6A1D0D68680050FFBE /* MBTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTopicCell.m; sourceTree = "<group>"; };
 		3AF62F6B1D0D68680050FFBE /* MBTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBTopicCell.xib; sourceTree = "<group>"; };
+		3AFA59E21D10F5C600899A08 /* MBProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressView.h; sourceTree = "<group>"; };
+		3AFA59E31D10F5C700899A08 /* MBProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressView.m; sourceTree = "<group>"; };
+		3AFA59E81D10FB1400899A08 /* MBShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBShowPictureController.h; sourceTree = "<group>"; };
+		3AFA59E91D10FB1400899A08 /* MBShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBShowPictureController.m; sourceTree = "<group>"; };
+		3AFA59EA1D10FB1400899A08 /* MBShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBShowPictureController.xib; sourceTree = "<group>"; };
 		9A06C519DB4FAC17D69CE3C1 /* Pods-MBBS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBBS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBBS/Pods-MBBS.debug.xcconfig"; sourceTree = "<group>"; };
 		A3195EE78E988CA4E71C4046 /* Pods-MBBS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBBS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MBBS/Pods-MBBS.release.xcconfig"; sourceTree = "<group>"; };
 		CF922091BA7F35895CAF29F6 /* Pods_MBBS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBBS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -386,6 +394,9 @@
 				3A4835E71D018A5700B88FD7 /* MBEssenceTagsController.m */,
 				3A35FD4D1D0E9893006E810F /* MBTopicViewController.h */,
 				3A35FD4E1D0E9893006E810F /* MBTopicViewController.m */,
+				3AFA59E81D10FB1400899A08 /* MBShowPictureController.h */,
+				3AFA59E91D10FB1400899A08 /* MBShowPictureController.m */,
+				3AFA59EA1D10FB1400899A08 /* MBShowPictureController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -413,6 +424,8 @@
 				3AE7781F1D10082900392A06 /* MBTopicPictureView.h */,
 				3AE778201D10082900392A06 /* MBTopicPictureView.m */,
 				3AE778221D10083400392A06 /* MBTopicPictureView.xib */,
+				3AFA59E21D10F5C600899A08 /* MBProgressView.h */,
+				3AFA59E31D10F5C700899A08 /* MBProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -607,6 +620,7 @@
 				3A4835F01D018ACC00B88FD7 /* MBEssenceTagsCell.xib in Resources */,
 				3AE778231D10083400392A06 /* MBTopicPictureView.xib in Resources */,
 				3AF62F6D1D0D68680050FFBE /* MBTopicCell.xib in Resources */,
+				3AFA59EC1D10FB1400899A08 /* MBShowPictureController.xib in Resources */,
 				3A9590BC1CFEBEA2005FA2B4 /* MBFriendTrendsController.xib in Resources */,
 				3ABE8AA01CFD3A670036C6CB /* Assets.xcassets in Resources */,
 				3ABE8A9E1CFD3A670036C6CB /* Main.storyboard in Resources */,
@@ -690,6 +704,7 @@
 				3A53961B1CFD901300DB5724 /* UIView+MBExtension.m in Sources */,
 				3AF62F681D0D565E0050FFBE /* MBTopic.m in Sources */,
 				3A4835EF1D018ACC00B88FD7 /* MBEssenceTagsCell.m in Sources */,
+				3AFA59EB1D10FB1400899A08 /* MBShowPictureController.m in Sources */,
 				3A35FD4C1D0E8D4F006E810F /* NSDate+MBExtension.m in Sources */,
 				071C1A3B1D030BD800E5B857 /* MBLoginRegisterController.m in Sources */,
 				3A53960F1CFD827C00DB5724 /* MBNewController.m in Sources */,
@@ -709,6 +724,7 @@
 				3A9590D71CFEDB3A005FA2B4 /* NSDictionary+MBLog.m in Sources */,
 				3A53960C1CFD826300DB5724 /* MBFriendTrendsController.m in Sources */,
 				3A5396151CFD882D00DB5724 /* MBNavigationController.m in Sources */,
+				3AFA59E41D10F5C700899A08 /* MBProgressView.m in Sources */,
 				3A5396181CFD8B6100DB5724 /* MBTabBar.m in Sources */,
 				3A5395F71CFD69C000DB5724 /* MBTabBarController.m in Sources */,
 				3AC509AC1D056A930074B28E /* MBPushGuideView.m in Sources */,

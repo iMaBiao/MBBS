@@ -47,13 +47,12 @@ static NSString * const MBTopicCellID = @"topic";
     [self setTableView];
     // 添加刷新控件
     [self setRefresh];
-
 }
 
 - (void)setTableView{
     
     CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = 64 + 35;
+    CGFloat top = MBTitleViewY + MBTitleViewH;
     self.tableView.contentInset  = UIEdgeInsetsMake(top, 0, bottom, 0);
     
     // 设置滚动条的内边距
@@ -62,11 +61,12 @@ static NSString * const MBTopicCellID = @"topic";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor  = [UIColor clearColor];
     
+    //注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MBTopicCell class]) bundle:nil] forCellReuseIdentifier:MBTopicCellID];
-    
 }
 
 - (void)setRefresh{
+    
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     
     // 自动改变透明度
@@ -88,7 +88,7 @@ static NSString * const MBTopicCellID = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     
     self.params = params;
     
@@ -113,7 +113,6 @@ static NSString * const MBTopicCellID = @"topic";
         //清空页码
         self.params = 0;
         
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != params) {
             return ;
@@ -133,8 +132,10 @@ static NSString * const MBTopicCellID = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
-    params[@"page"] = @(self.page);
+    params[@"type"] = @(self.type);
+    
+    NSInteger page = self.page + 1;
+    params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
     self.params = params;
     
@@ -146,22 +147,20 @@ static NSString * const MBTopicCellID = @"topic";
         }
         
         self.maxtime = responseObject[@"info"][@"list"];
-        
+         // 字典 -> 模型
         NSArray *newTopics = [MBTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:newTopics];
-        
+        //刷新表格
         [self.tableView reloadData];
-        
+        //结束上拉刷新
         [self.tableView.mj_footer endRefreshing];
-        
+        //设置页码
+        self.page = page;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != params) {
             return ;
         }
-        
         [self.tableView.mj_footer endRefreshing];
-        
-        self.page--;
     }];
 }
 
@@ -173,7 +172,6 @@ static NSString * const MBTopicCellID = @"topic";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MBTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:MBTopicCellID];
-    
     cell.topic = self.topics[indexPath.row];
     return cell;
 }

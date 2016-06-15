@@ -33,6 +33,7 @@
 //}
 
 - (CGFloat)cellHeight{
+    
     if (!_cellHeight) {
         
         // 文字的最大尺寸
@@ -47,21 +48,33 @@
         
         // 根据段子的类型来计算cell的高度
         if (self.type == MBTopicTypePicture ) {//图片
+            CGFloat pictureW = maxSize.width;//图片宽度 = 文字宽度
             
-            CGFloat pictureW = maxSize.width;
             //显示出来的高度
-//            CGFloat pictureH = pictureW * self.large_image / self.width;
+            // 显示高度--- 显示宽度
+            // 实际高度--- 实际宽度
+            CGFloat pictureH = pictureW * self.height / self.width;
             
-//            if (pictureH >= MBTopicCellPictureH) {// 图片高度过长
-//                pictureH = MBTopicCellPictureBreakH;
-//                self.bigPicture = YES;
-//            }
+            if (pictureH >= MBTopicCellPictureH) {// 图片高度过长
+                pictureH = MBTopicCellPictureBreakH;
+                self.bigPicture = YES;
+            }
+            // 计算图片控件的frame
+            CGFloat pictureX = MBTopicCellMargin;
+            CGFloat pictureY = MBTopicCellTextY + textH + MBTopicCellMargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            _cellHeight += pictureH + MBTopicCellMargin;
+        }else if (self.type == MBTopicTypeVideo){
+            
         }
-        _cellHeight = MBTopicCellTextY  + MBTopicCellBottomBarH + 3 * MBTopicCellMargin + textH;
         
-        NSLog(@"text = %@\n\n",self.text);
-        NSLog(@"textH = %f\n\n",textH);
-        NSLog(@"cellHeight = %f\n\n",_cellHeight);
+        // 底部工具条的高度
+        _cellHeight +=  MBTopicCellBottomBarH +  MBTopicCellMargin;
+        
+//        NSLog(@"text = %@\n\n",self.text);
+//        NSLog(@"textH = %f\n\n",textH);
+//        NSLog(@"cellHeight = %f\n\n",_cellHeight);
     }
     return _cellHeight;
 }
