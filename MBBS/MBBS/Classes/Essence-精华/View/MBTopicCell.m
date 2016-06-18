@@ -12,6 +12,9 @@
 #import "MBTopicPictureView.h"
 #import "MBTopicVoiceView.h"
 #import "MBTopicVideoView.h"
+#import "MBComment.h"
+#import "MBUser.h"
+#import "MBComment.h"
 
 
 @interface MBTopicCell()
@@ -42,6 +45,11 @@
 @property(nonatomic,weak)MBTopicVoiceView *voiceView;
 /** 视频帖子中间的内容 */
 @property(nonatomic,weak)MBTopicVideoView *videoView;
+/** 最热评论的内容 */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+/** 最热评论的整体 */
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+
 @end
 
 @implementation MBTopicCell
@@ -129,6 +137,15 @@
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
         self.videoView.hidden = YES;
+    }
+    
+    //处理最热评论
+    MBComment *cmt = [topic.top_cmt firstObject];
+    if (cmt) {
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+    }else{
+        self.topCmtView.hidden = YES;
     }
 }
 

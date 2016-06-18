@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -148,18 +149,49 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pf2-0p-hR3" userLabel="评论View">
+                        <rect key="frame" x="18" y="141" width="291" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7A-E4-yBZ" userLabel="最热评论">
+                                <rect key="frame" x="0.0" y="0.0" width="56" height="17"/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT2-Mf-kI2" userLabel="评论内容">
+                                <rect key="frame" x="0.0" y="17" width="291" height="47"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GT2-Mf-kI2" secondAttribute="bottom" id="7iJ-eA-JHp"/>
+                            <constraint firstAttribute="trailing" secondItem="GT2-Mf-kI2" secondAttribute="trailing" id="B03-6K-y90"/>
+                            <constraint firstItem="Q7A-E4-yBZ" firstAttribute="leading" secondItem="Pf2-0p-hR3" secondAttribute="leading" id="MB0-j5-cLv"/>
+                            <constraint firstItem="GT2-Mf-kI2" firstAttribute="leading" secondItem="Pf2-0p-hR3" secondAttribute="leading" id="Rwv-5I-Dca"/>
+                            <constraint firstItem="GT2-Mf-kI2" firstAttribute="top" secondItem="Q7A-E4-yBZ" secondAttribute="bottom" id="pbK-BR-2xk"/>
+                            <constraint firstItem="Q7A-E4-yBZ" firstAttribute="top" secondItem="Pf2-0p-hR3" secondAttribute="top" id="s8Z-cU-K5Y"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="gRo-9X-pST" firstAttribute="leading" secondItem="EnJ-es-L0z" secondAttribute="leading" id="AiU-3e-mza"/>
                     <constraint firstItem="EnJ-es-L0z" firstAttribute="top" secondItem="aU5-Ro-9Ry" secondAttribute="top" id="Fxf-93-qhU"/>
                     <constraint firstItem="EnJ-es-L0z" firstAttribute="leading" secondItem="aU5-Ro-9Ry" secondAttribute="trailing" constant="10" id="MHM-bA-Dbs"/>
                     <constraint firstItem="zMc-zO-WHN" firstAttribute="top" secondItem="aU5-Ro-9Ry" secondAttribute="bottom" constant="10" id="RzC-jz-jql"/>
+                    <constraint firstItem="Pf2-0p-hR3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="TdL-V6-XCf"/>
                     <constraint firstItem="zMc-zO-WHN" firstAttribute="trailing" secondItem="07P-b8-2G4" secondAttribute="trailing" constant="2" id="VF5-fl-lbT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Pf2-0p-hR3" secondAttribute="trailing" constant="10" id="b0x-Ov-BPo"/>
                     <constraint firstItem="07P-b8-2G4" firstAttribute="top" secondItem="EnJ-es-L0z" secondAttribute="top" id="hRJ-sH-qO4"/>
                     <constraint firstItem="aU5-Ro-9Ry" firstAttribute="trailing" secondItem="VWN-IP-fJM" secondAttribute="trailing" constant="-5" id="iDC-SD-biP"/>
                     <constraint firstItem="zMc-zO-WHN" firstAttribute="leading" secondItem="aU5-Ro-9Ry" secondAttribute="leading" id="iI9-KI-rol"/>
                     <constraint firstItem="gRo-9X-pST" firstAttribute="bottom" secondItem="aU5-Ro-9Ry" secondAttribute="bottom" id="iOI-6k-yOg"/>
                     <constraint firstItem="aU5-Ro-9Ry" firstAttribute="bottom" secondItem="VWN-IP-fJM" secondAttribute="bottom" constant="-5" id="jqV-bD-eoi"/>
+                    <constraint firstItem="M1i-NC-ogh" firstAttribute="top" secondItem="Pf2-0p-hR3" secondAttribute="bottom" constant="10" id="pxa-zP-55p"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>
@@ -181,6 +213,8 @@
                 <outlet property="shareButton" destination="r4E-e7-yPk" id="JfS-lg-CtK"/>
                 <outlet property="sinaVView" destination="VWN-IP-fJM" id="oiG-gs-6cg"/>
                 <outlet property="text_Label" destination="zMc-zO-WHN" id="tKP-Cu-okm"/>
+                <outlet property="topCmtContentLabel" destination="GT2-Mf-kI2" id="V2s-Ex-cmu"/>
+                <outlet property="topCmtView" destination="Pf2-0p-hR3" id="e3v-Mi-0Zt"/>
             </connections>
             <point key="canvasLocation" x="336.5" y="490.5"/>
         </tableViewCell>

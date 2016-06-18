@@ -44,6 +44,8 @@
 		3ABE8AAE1CFD3A680036C6CB /* MBBSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE8AAD1CFD3A680036C6CB /* MBBSTests.m */; };
 		3AC03C211D152FA000D50D1A /* MBPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC03C201D152FA000D50D1A /* MBPublishView.m */; };
 		3AC03C231D152FB000D50D1A /* MBPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC03C221D152FB000D50D1A /* MBPublishView.xib */; };
+		3AC03C291D15471B00D50D1A /* MBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC03C281D15471B00D50D1A /* MBUser.m */; };
+		3AC03C2C1D15472800D50D1A /* MBComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC03C2B1D15472800D50D1A /* MBComment.m */; };
 		3AC509AC1D056A930074B28E /* MBPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC509AB1D056A930074B28E /* MBPushGuideView.m */; };
 		3AC509B01D056AAE0074B28E /* MBPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */; };
 		3AD9ACA01D1285B5001EB08C /* MBTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9AC9F1D1285B5001EB08C /* MBTopicVoiceView.m */; };
@@ -152,6 +154,10 @@
 		3AC03C1F1D152FA000D50D1A /* MBPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPublishView.h; sourceTree = "<group>"; };
 		3AC03C201D152FA000D50D1A /* MBPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPublishView.m; sourceTree = "<group>"; };
 		3AC03C221D152FB000D50D1A /* MBPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPublishView.xib; sourceTree = "<group>"; };
+		3AC03C271D15471B00D50D1A /* MBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUser.h; sourceTree = "<group>"; };
+		3AC03C281D15471B00D50D1A /* MBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUser.m; sourceTree = "<group>"; };
+		3AC03C2A1D15472800D50D1A /* MBComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBComment.h; sourceTree = "<group>"; };
+		3AC03C2B1D15472800D50D1A /* MBComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBComment.m; sourceTree = "<group>"; };
 		3AC509AA1D056A930074B28E /* MBPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPushGuideView.h; sourceTree = "<group>"; };
 		3AC509AB1D056A930074B28E /* MBPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPushGuideView.m; sourceTree = "<group>"; };
 		3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPushGuideView.xib; sourceTree = "<group>"; };
@@ -429,6 +435,10 @@
 				3A4835EA1D018A7300B88FD7 /* MBEssenceTags.m */,
 				3AF62F661D0D565E0050FFBE /* MBTopic.h */,
 				3AF62F671D0D565E0050FFBE /* MBTopic.m */,
+				3AC03C271D15471B00D50D1A /* MBUser.h */,
+				3AC03C281D15471B00D50D1A /* MBUser.m */,
+				3AC03C2A1D15472800D50D1A /* MBComment.h */,
+				3AC03C2B1D15472800D50D1A /* MBComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -736,6 +746,7 @@
 				3AF62F681D0D565E0050FFBE /* MBTopic.m in Sources */,
 				3A4835EF1D018ACC00B88FD7 /* MBEssenceTagsCell.m in Sources */,
 				3AFA59EB1D10FB1400899A08 /* MBShowPictureController.m in Sources */,
+				3AC03C2C1D15472800D50D1A /* MBComment.m in Sources */,
 				3A35FD4C1D0E8D4F006E810F /* NSDate+MBExtension.m in Sources */,
 				3AD9ACA01D1285B5001EB08C /* MBTopicVoiceView.m in Sources */,
 				071C1A3B1D030BD800E5B857 /* MBLoginRegisterController.m in Sources */,
@@ -756,6 +767,7 @@
 				3A9590D71CFEDB3A005FA2B4 /* NSDictionary+MBLog.m in Sources */,
 				3A53960C1CFD826300DB5724 /* MBFriendTrendsController.m in Sources */,
 				3A5396151CFD882D00DB5724 /* MBNavigationController.m in Sources */,
+				3AC03C291D15471B00D50D1A /* MBUser.m in Sources */,
 				3AFA59E41D10F5C700899A08 /* MBProgressView.m in Sources */,
 				3A5396181CFD8B6100DB5724 /* MBTabBar.m in Sources */,
 				3A5395F71CFD69C000DB5724 /* MBTabBarController.m in Sources */,

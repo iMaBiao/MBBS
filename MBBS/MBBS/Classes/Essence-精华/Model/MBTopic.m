@@ -9,6 +9,8 @@
 
 #import "MBTopic.h"
 #import "MJExtension.h"
+#import "MBComment.h"
+#import "MBUser.h"
 
 @implementation MBTopic
 
@@ -32,6 +34,9 @@
 //+ (NSString *)mj_replacedKeyFromPropertyName121:(NSString *)propertyName{
 //    return propertyName;
 //}
++ (NSDictionary *)mj_objectClassInArray{
+    return @{@"top_cmt":@"MBComment"};
+}
 
 - (CGFloat)cellHeight{
     
@@ -87,12 +92,23 @@
             _cellHeight += videoH + MBTopicCellMargin;
         }
         
+        
         // 底部工具条的高度
         _cellHeight +=  MBTopicCellBottomBarH +  MBTopicCellMargin;
+    
+    
+    //如果有热门评论
+    MBComment *cmt = [self.top_cmt firstObject];
+    if (cmt) {
+        NSString  *content = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+        CGFloat contentH = [content boundingRectWithSize:maxSize  options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
         
-//        NSLog(@"text = %@\n\n",self.text);
-//        NSLog(@"textH = %f\n\n",textH);
-//        NSLog(@"cellHeight = %f\n\n",_cellHeight);
+        _cellHeight += MBTopicCellTopCmtTitleH + contentH + MBTopicCellMargin;
+    }
+    //        NSLog(@"text = %@\n\n",self.text);
+    //        NSLog(@"textH = %f\n\n",textH);
+    //        NSLog(@"cellHeight = %f\n\n",_cellHeight);
+        
     }
     return _cellHeight;
 }

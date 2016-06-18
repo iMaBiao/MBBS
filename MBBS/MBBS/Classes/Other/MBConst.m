@@ -14,3 +14,10 @@ CGFloat const MBTopicCellBottomBarH = 44;
 CGFloat const MBTopicCellPictureH = 1000;
 
 CGFloat const MBTopicCellPictureBreakH = 250;
+
+
+NSString * const MBUserSexMale = @"m";
+NSString * const MBUserSexFemale = @"f";
+
+
+CGFloat const MBTopicCellTopCmtTitleH = 20;
