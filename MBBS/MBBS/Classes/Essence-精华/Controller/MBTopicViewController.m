@@ -31,7 +31,7 @@
 
 @implementation MBTopicViewController
 
-static NSString * const MBTopicCellID = @"topic";
+
 
 - (NSMutableArray *)topics{
     if (!_topics) {
@@ -49,6 +49,8 @@ static NSString * const MBTopicCellID = @"topic";
     [self setRefresh];
 }
 
+static NSString * const MBTopicCellID = @"topic";
+
 - (void)setTableView{
     
     CGFloat bottom = self.tabBarController.tabBar.height;
@@ -61,8 +63,8 @@ static NSString * const MBTopicCellID = @"topic";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor  = [UIColor clearColor];
     
-    //注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MBTopicCell class]) bundle:nil] forCellReuseIdentifier:MBTopicCellID];
+
 }
 
 - (void)setRefresh{
@@ -74,7 +76,6 @@ static NSString * const MBTopicCellID = @"topic";
     [self.tableView.mj_header beginRefreshing];
     
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
-    
 }
 
 /**
@@ -166,25 +167,24 @@ static NSString * const MBTopicCellID = @"topic";
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //当没有数据时隐藏底部的刷新控件
+    self.tableView.mj_footer.hidden = (self.topics.count == 0);
+    
     return self.topics.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MBTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:MBTopicCellID];
+    
     cell.topic = self.topics[indexPath.row];
+    
     return cell;
 }
 #pragma mark - Table view Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MBTopic *topic = self.topics[indexPath.row];
-    
-//    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4*10, MAXFLOAT);
-//    CGFloat textH =  [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName :[UIFont systemFontOfSize:14]} context:nil].size.height;
-//    
-//    CGFloat cellH = 55 + textH + 44 + 4 *10 ;
-//    NSLog(@"cellHeight = %f\n\n\n",topic.cellHeight); 
     
     return topic.cellHeight;
 }

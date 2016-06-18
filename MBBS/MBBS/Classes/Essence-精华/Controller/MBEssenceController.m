@@ -128,7 +128,7 @@
     
     // 标签栏整体
     UIView *titleView = [[UIView alloc]init];
-    titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.7];
+    titleView.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.9];
     titleView.width = self.view.width;
     titleView.height  = MBTitleViewH;
     titleView.y = MBTitleViewY;

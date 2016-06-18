@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MBPublishView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwm-iB-MX8">
+                    <rect key="frame" x="156" y="530" width="289" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Nyv-OF-wVR"/>
+                        <constraint firstAttribute="width" constant="289" id="dsd-iW-5Q0"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="shareButtonCancel"/>
+                    <connections>
+                        <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="RrX-r6-hxO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="uwm-iB-MX8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9hx-Gi-s4G"/>
+                <constraint firstAttribute="bottom" secondItem="uwm-iB-MX8" secondAttribute="bottom" constant="30" id="Esz-zy-JOe"/>
+            </constraints>
+            <point key="canvasLocation" x="619" y="412"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="shareButtonCancel" width="289" height="40"/>
+    </resources>
+</document>

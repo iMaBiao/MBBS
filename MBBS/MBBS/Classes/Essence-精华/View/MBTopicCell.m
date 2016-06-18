@@ -10,6 +10,9 @@
 #import "MBTopic.h"
 #import "UIImageView+WebCache.h"
 #import "MBTopicPictureView.h"
+#import "MBTopicVoiceView.h"
+#import "MBTopicVideoView.h"
+
 
 @interface MBTopicCell()
 /** 头像 */
@@ -33,9 +36,12 @@
 /** 帖子的文字内容 */
 @property (weak, nonatomic) IBOutlet UILabel *text_Label;
 
-/** 图片帖子中间的内容 */
+/** 图片帖子中间的图片 */
 @property(nonatomic,weak)MBTopicPictureView *pictureView;
-
+/***  图片帖子中间的声音*/
+@property(nonatomic,weak)MBTopicVoiceView *voiceView;
+/** 视频帖子中间的内容 */
+@property(nonatomic,weak)MBTopicVideoView *videoView;
 @end
 
 @implementation MBTopicCell
@@ -48,11 +54,30 @@
     }
     return _pictureView;
 }
+- (MBTopicVoiceView *)voiceView{
+    if (!_voiceView) {
+        MBTopicVoiceView *voiceView = [MBTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
+- (MBTopicVideoView *)videoView{
+    if (!_videoView) {
+        MBTopicVideoView *videoView = [MBTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
+
 
 - (void)awakeFromNib {
-    [super awakeFromNib];
+//    [super awakeFromNib];
 //    UIImageView *bgView = [[UIImageView alloc]init];
 //    bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    
     self.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
 }
 
@@ -78,11 +103,32 @@
     self.text_Label.text = topic.text;
     
     // 根据模型类型(帖子类型)添加对应的内容到cell的中间
-    if (topic.type == MBTopicTypePicture) {
+    if (topic.type == MBTopicTypePicture) {//图片
+        self.pictureView.hidden = NO;
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
-    }else if(topic.type == MBTopicTypeVideo){
         
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
+        
+    }else if(topic.type == MBTopicTypeVoice){//声音
+        self.voiceView.hidden = NO;
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceF;
+        
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    }else if (topic.type == MBTopicTypeVideo){//视频
+        self.videoView.hidden = NO;
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoF;
+        
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+    }else{
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }
 }
 
@@ -100,8 +146,13 @@
 
 - (void)setFrame:(CGRect)frame{
 
+//    frame.origin.x = MBTopicCellMargin;
+//    frame.size.width -=  2 * MBTopicCellMargin;
+//    frame.size.height -= MBTopicCellMargin;
+//    frame.origin.y += MBTopicCellMargin;
+    
     frame.origin.x = MBTopicCellMargin;
-    frame.size.width -=  2 * MBTopicCellMargin;
+    frame.size.width -= 2 *MBTopicCellMargin;
     frame.size.height -= MBTopicCellMargin;
     frame.origin.y += MBTopicCellMargin;
     

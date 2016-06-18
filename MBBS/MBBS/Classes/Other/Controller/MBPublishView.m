@@ -1,27 +1,46 @@
 //
-//  MBPublishViewController.m
+//  MBPublishView.m
 //  MBBS
 //
-//  Created by 浩渺 on 16/6/15.
+//  Created by 浩渺 on 16/6/18.
 //  Copyright © 2016年 biao. All rights reserved.
 //
 
-#import "MBPublishViewController.h"
-#import "MBVerticalButtton.h"
+#import "MBPublishView.h"
 #import "POP.h"
+#import "MBVerticalButtton.h"
 
-@interface MBPublishViewController ()
+@interface MBPublishView()
 
 @end
 
-@implementation MBPublishViewController
+static CGFloat const MBAnimationDelay = 0.1;
+static CGFloat const MBSpringFactor = 10;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // 让控制器的view不能被点击
-    self.view.userInteractionEnabled = NO;
+
+@implementation MBPublishView
+
++ (instancetype)publishView{
+    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
+}
+
+static UIWindow *window_;
++ (void)show{
+    //创建窗口
+    window_ = [[UIWindow alloc]init];
+    window_.frame = [UIScreen mainScreen].bounds;
+    window_.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.8];
+    window_.hidden = NO;
     
+    //添加发布界面
+    MBPublishView *publishView  = [MBPublishView publishView];
+    publishView.frame = window_.bounds;
+    [window_ addSubview:publishView];
+}
 
+- (void)awakeFromNib{
+    //不能被点击
+    self.userInteractionEnabled = NO;
     
     //数据
     NSArray *images = @[@"publish-video", @"publish-picture", @"publish-text", @"publish-audio", @"publish-review", @"publish-offline"];
@@ -38,21 +57,13 @@
         MBVerticalButtton *button = [[MBVerticalButtton alloc]init];
         button.tag = i;
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:button];
+        [self addSubview:button];
         
         //设置内容
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button setTitle:titles[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
-        
-//        //设置frame
-//        button.width = buttonW;
-//        button.height = buttonH;
-//        int row  = i / maxCols;
-//        int col = i % maxCols;
-//        button.x = buttonStartX + col * (xMargin + buttonW);
-//        button.y = buttonStartY + row * buttonH ;
         
         //计算X Y
         int row = i / maxCols;
@@ -65,18 +76,15 @@
         POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
         animation.fromValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonBeginY, buttonW, buttonH)];
         animation.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonEndY, buttonW, buttonH)];
-        
-        animation.springBounciness = 10;
-        animation.springSpeed  = 10;
-        animation.beginTime = CACurrentMediaTime() + 0.1 * i;
+        animation.springBounciness = MBSpringFactor;
+        animation.springSpeed  = MBSpringFactor;
+        animation.beginTime = CACurrentMediaTime() + MBAnimationDelay * i;
         [button pop_addAnimation:animation forKey:nil];
     }
     
     // 添加标语
     UIImageView *sloganView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"app_slogan"]];
-    //    sloganView.y = theHeight * 0.2;
-    //    sloganView.centerX = theWidth * 0.5;
-    [self.view addSubview:sloganView];
+    [self addSubview:sloganView];
     
     //标语动画
     POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
@@ -89,37 +97,51 @@
     animation.springBounciness  = 10;
     animation.springSpeed = 10;
     [animation setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
-       // 标语动画执行完毕, 恢复点击事件
-        self.view.userInteractionEnabled = YES;
+        // 标语动画执行完毕, 恢复点击事件
+        self.userInteractionEnabled = YES;
     }];
     
     [sloganView pop_addAnimation:animation forKey:nil];
-    
 }
--(void)buttonClick:(UIButton *)button{
+- (void)buttonClick:(UIButton *)button{
     [self cancleWithCompletionBlock:^{
-        
+        if (button.tag == 0) {
+            MBLog(@"发视频");
+        }else if (button.tag == 1){
+            MBLog(@"发图片");
+        }
     }];
 }
-
-
-- (void)cancleWithCompletionBlock:(void(^)())completionBlock{
-    //让控制器不能被点击
-    self.view.userInteractionEnabled = NO;
-    int beginIndex = 2;
-    
-    for (int i = beginIndex; i< self.view.subviews.count; i++) {
-        UIView  *subView = self.view.subviews[i];
-        //基本动画
-//        POPBaseAnimation *animation = [POPBaseAnimation ]
-    }
+- (IBAction)cancel:(id)sender {
+    [self cancleWithCompletionBlock:nil];
 }
 
-/**
- *  关闭页面
- */
-- (IBAction)cancel{
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void)cancleWithCompletionBlock:(void(^)())completionBlock{
+    // 不能被点击
+    self.userInteractionEnabled = NO;
+    int beginIndex = 1;
+    
+    for (int i = beginIndex; i< self.subviews.count; i++) {
+        UIView  *subView = self.subviews[i];
+        //基本动画
+        POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
+        CGFloat  centerY = subView.centerY  + theHeight;
+        animation.toValue = [NSValue valueWithCGPoint:CGPointMake(subView.centerX, centerY)];
+        animation.beginTime = CACurrentMediaTime() + (i - beginIndex) * 0.1;
+        [subView pop_addAnimation:animation forKey:nil];
+        
+        
+        //监听最后一个动画
+        if (i == self.subviews.count-1 ) {
+            [animation setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
+                // 销毁窗口
+                window_ = nil;
+                // 执行传进来的completionBlock参数
+                !completionBlock ? :completionBlock();
+                
+            }];
+        }
+    }
 }
 
 @end

@@ -7,8 +7,7 @@
 //
 
 #import "MBTabBar.h"
-#import "MBPublishViewController.h"
-
+#import "MBPublishView.h"
 @interface MBTabBar()
 /**
  *  发布按钮
@@ -37,7 +36,8 @@
 - (void)publishClick{
     MBLogFunc;
     
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:[[MBPublishViewController alloc]init] animated:YES completion:nil];
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:[[MBPublishViewController alloc]init] animated:YES completion:nil];
+    [MBPublishView show];
 }
 
 /**

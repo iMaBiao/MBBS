@@ -15,7 +15,8 @@
 //因为cellHeigit是readonly，Xcode会默认生成生成getter方法和_cellHeight,但是重写了getter方法，就不会自动生成_cellHeight了，所有要自己补充上去
 {
     CGFloat _cellHeight;
-    CGRect _pictureF;
+    CGRect  _pictureF;
+    CGRect  _voiceF;
 }
 
 //因为模型属性名与服务器返回的属性名不一致，需要重写这个方法替换属性名
@@ -65,8 +66,25 @@
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             
             _cellHeight += pictureH + MBTopicCellMargin;
-        }else if (self.type == MBTopicTypeVideo){
             
+        }else if (self.type == MBTopicTypeVoice){//声音
+            
+            CGFloat voiceX = MBTopicCellMargin;
+            CGFloat voiceY = MBTopicCellTextY + textH + MBTopicCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            
+            _cellHeight += voiceH + MBTopicCellMargin;
+            
+        }else if (self.type == MBTopicTypeVideo){//视频
+            CGFloat videoX = MBTopicCellMargin;
+            CGFloat videoY = MBTopicCellTextY + textH + MBTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            _cellHeight += videoH + MBTopicCellMargin;
         }
         
         // 底部工具条的高度
