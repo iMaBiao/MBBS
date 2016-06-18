@@ -46,6 +46,8 @@
 		3AC03C231D152FB000D50D1A /* MBPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC03C221D152FB000D50D1A /* MBPublishView.xib */; };
 		3AC03C291D15471B00D50D1A /* MBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC03C281D15471B00D50D1A /* MBUser.m */; };
 		3AC03C2C1D15472800D50D1A /* MBComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC03C2B1D15472800D50D1A /* MBComment.m */; };
+		3AC03C301D15553B00D50D1A /* MBCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC03C2E1D15553B00D50D1A /* MBCommentViewController.m */; };
+		3AC03C311D15553B00D50D1A /* MBCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC03C2F1D15553B00D50D1A /* MBCommentViewController.xib */; };
 		3AC509AC1D056A930074B28E /* MBPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC509AB1D056A930074B28E /* MBPushGuideView.m */; };
 		3AC509B01D056AAE0074B28E /* MBPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */; };
 		3AD9ACA01D1285B5001EB08C /* MBTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9AC9F1D1285B5001EB08C /* MBTopicVoiceView.m */; };
@@ -158,6 +160,9 @@
 		3AC03C281D15471B00D50D1A /* MBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUser.m; sourceTree = "<group>"; };
 		3AC03C2A1D15472800D50D1A /* MBComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBComment.h; sourceTree = "<group>"; };
 		3AC03C2B1D15472800D50D1A /* MBComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBComment.m; sourceTree = "<group>"; };
+		3AC03C2D1D15553B00D50D1A /* MBCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCommentViewController.h; sourceTree = "<group>"; };
+		3AC03C2E1D15553B00D50D1A /* MBCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCommentViewController.m; sourceTree = "<group>"; };
+		3AC03C2F1D15553B00D50D1A /* MBCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBCommentViewController.xib; sourceTree = "<group>"; };
 		3AC509AA1D056A930074B28E /* MBPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPushGuideView.h; sourceTree = "<group>"; };
 		3AC509AB1D056A930074B28E /* MBPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPushGuideView.m; sourceTree = "<group>"; };
 		3AC509AF1D056AAE0074B28E /* MBPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBPushGuideView.xib; sourceTree = "<group>"; };
@@ -424,6 +429,9 @@
 				3AFA59E81D10FB1400899A08 /* MBShowPictureController.h */,
 				3AFA59E91D10FB1400899A08 /* MBShowPictureController.m */,
 				3AFA59EA1D10FB1400899A08 /* MBShowPictureController.xib */,
+				3AC03C2D1D15553B00D50D1A /* MBCommentViewController.h */,
+				3AC03C2E1D15553B00D50D1A /* MBCommentViewController.m */,
+				3AC03C2F1D15553B00D50D1A /* MBCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -667,6 +675,7 @@
 				3A9590CE1CFECABC005FA2B4 /* MBRecommendCategoryCell.xib in Resources */,
 				3A9590C41CFEC375005FA2B4 /* MBRecommendController.xib in Resources */,
 				3AC509B01D056AAE0074B28E /* MBPushGuideView.xib in Resources */,
+				3AC03C311D15553B00D50D1A /* MBCommentViewController.xib in Resources */,
 				071C1A3C1D030BD800E5B857 /* MBLoginRegisterController.xib in Resources */,
 				3AD9ACA71D12B2BF001EB08C /* MBTopicVideoView.xib in Resources */,
 			);
@@ -764,6 +773,7 @@
 				3A9590CD1CFECABC005FA2B4 /* MBRecommendCategoryCell.m in Sources */,
 				3AE778211D10082900392A06 /* MBTopicPictureView.m in Sources */,
 				3A5396121CFD829000DB5724 /* MBEssenceController.m in Sources */,
+				3AC03C301D15553B00D50D1A /* MBCommentViewController.m in Sources */,
 				3A9590D71CFEDB3A005FA2B4 /* NSDictionary+MBLog.m in Sources */,
 				3A53960C1CFD826300DB5724 /* MBFriendTrendsController.m in Sources */,
 				3A5396151CFD882D00DB5724 /* MBNavigationController.m in Sources */,
